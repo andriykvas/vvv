@@ -1,0 +1,30 @@
+.header {
+    &__wrap {
+        position: relative;
+        padding: 45px 50px;
+        @include respond-below(sm) {
+            padding: 25px 0;
+        }
+    }
+    &__logo {
+        @include respond-below(sm) {
+            display: none;
+        }
+    }
+    &__logo2 {
+        display: none;
+        @include respond-below(sm) {
+            display: inline-block;
+        }
+    }
+    &__logo-wrap {
+        text-align: center;
+    }
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: var(--transition-base);
+        background-color: rgba($color-hover, 0.7);
+    }
+}
